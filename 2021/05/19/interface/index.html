@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="java,String," />
+  <meta name="keywords" content="java," />
 
 
 
@@ -85,18 +85,17 @@
 
 
 
-<meta name="description" content="接口 接口决不能含有实例域，可以包含常量">
+<meta name="description" content="接口 接口决不能含有实例域，可以包含常量在Java SE 8中，可以为接口方法提供一个默认实现。必须用default修饰符标记这样一个方法在Java SE 8中，允许在接口中增加静态方法  解决默认方法冲突 如果先在一个接口中将一个方法定义为默认方法，然后又在超类或另一个接口中定义了同样的方法，会发生什么情况？  超类优先。如果超类提供了一个具体方法，同名而且有相同参数类型的默认方法会被忽略。 接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java 接口">
 <meta property="og:url" content="https://zhangsheng0540.github.io/2021/05/19/interface/index.html">
 <meta property="og:site_name" content="张盛的博客">
-<meta property="og:description" content="接口 接口决不能含有实例域，可以包含常量">
+<meta property="og:description" content="接口 接口决不能含有实例域，可以包含常量在Java SE 8中，可以为接口方法提供一个默认实现。必须用default修饰符标记这样一个方法在Java SE 8中，允许在接口中增加静态方法  解决默认方法冲突 如果先在一个接口中将一个方法定义为默认方法，然后又在超类或另一个接口中定义了同样的方法，会发生什么情况？  超类优先。如果超类提供了一个具体方法，同名而且有相同参数类型的默认方法会被忽略。 接">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-05-19T09:37:16.000Z">
-<meta property="article:modified_time" content="2021-05-19T10:24:44.012Z">
+<meta property="article:modified_time" content="2021-05-20T07:42:32.999Z">
 <meta property="article:author" content="张盛">
 <meta property="article:tag" content="java">
-<meta property="article:tag" content="String">
 <meta name="twitter:card" content="summary">
 
 
@@ -374,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  18
+                  327
                 </span>
               
 
@@ -412,7 +411,17 @@
 
       
         <h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><blockquote>
-<p>接口决不能含有实例域，可以包含常量</p>
+<p>接口决不能含有实例域，可以包含常量<br>在Java SE 8中，可以为接口方法提供一个默认实现。必须用default修饰符标记这样一个方法<br>在Java SE 8中，允许在接口中增加静态方法</p>
+</blockquote>
+<h4 id="解决默认方法冲突"><a href="#解决默认方法冲突" class="headerlink" title="解决默认方法冲突"></a>解决默认方法冲突</h4><blockquote>
+<p>如果先在一个接口中将一个方法定义为默认方法，然后又在超类或另一个接口中定义了同样的方法，会发生什么情况？</p>
+<ol>
+<li>超类优先。如果超类提供了一个具体方法，同名而且有相同参数类型的默认方法会被忽略。</li>
+<li>接口冲突。如果一个超接口提供了一个默认方法，另一个接口提供了一个同名而且参数类型（不论是否是默认参数）相同的方法，必须覆盖这个方法来解决冲突。</li>
+</ol>
+</blockquote>
+<h3 id="对象克隆"><a href="#对象克隆" class="headerlink" title="对象克隆"></a>对象克隆</h3><blockquote>
+<p>Object.clone() 默认是浅拷贝 如果对象中的所有数据域都是数值或其他基本类型，拷贝这些域没有任何问题。但是如果对象包含子对象的引用，拷贝域就会得到相同子对象的另一个引用，这样一来，原对象和克隆的对象仍然会共享一些信息。</p>
 </blockquote>
 
       
@@ -432,8 +441,6 @@
         <div class="post-tags">
           
             <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/String/" rel="tag"># String</a>
           
         </div>
       
@@ -603,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95%E5%86%B2%E7%AA%81"><span class="nav-number">1.1.</span> <span class="nav-text">解决默认方法冲突</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%85%8B%E9%9A%86"><span class="nav-number">2.</span> <span class="nav-text">对象克隆</span></a></li></ol></div>
             
 
           </div>
