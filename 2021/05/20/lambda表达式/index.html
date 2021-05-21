@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,lambda," />
 
 
 
@@ -85,16 +85,23 @@
 
 
 
-<meta name="description" content="张盛的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张盛的博客">
-<meta property="og:url" content="https://zhangsheng0540.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
+<meta name="description" content="lambda名称的由来 很多年前，那时还没有计算机，逻辑学家Alonzo Church想要形式化地表示能有效计算的数学函数。（奇怪的是，有些函数已经知道是存在的，但是没有人知道该如何计算这些函数的值。）他使用了希腊字母lambda (λ)来标记参数。 为什么是字母λ? Church已经把字母表里的所有其他字母都用完了吗？实际上，权威的《数学原理》一书中就使用重音符^来表示自由变量，受此启发，Chu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lambda表达式">
+<meta property="og:url" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="张盛的博客">
-<meta property="og:description" content="张盛的博客">
+<meta property="og:description" content="lambda名称的由来 很多年前，那时还没有计算机，逻辑学家Alonzo Church想要形式化地表示能有效计算的数学函数。（奇怪的是，有些函数已经知道是存在的，但是没有人知道该如何计算这些函数的值。）他使用了希腊字母lambda (λ)来标记参数。 为什么是字母λ? Church已经把字母表里的所有其他字母都用完了吗？实际上，权威的《数学原理》一书中就使用重音符^来表示自由变量，受此启发，Chu">
 <meta property="og:locale">
+<meta property="og:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/lambda_1.png">
+<meta property="og:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/lambda-2.png">
+<meta property="og:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/Comparator.png">
+<meta property="article:published_time" content="2021-05-20T08:08:26.000Z">
+<meta property="article:modified_time" content="2021-05-21T07:51:26.916Z">
 <meta property="article:author" content="张盛">
-<meta property="article:tag" content="张盛">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="lambda">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/lambda_1.png">
 
 
 
@@ -124,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://zhangsheng0540.github.io/tags/面向对象/"/>
+  <link rel="canonical" href="https://zhangsheng0540.github.io/2021/05/20/lambda表达式/"/>
 
 
 
 
 
-  <title>标签: 面向对象 | 张盛的博客</title>
+  <title>lambda表达式 | 张盛的博客</title>
   
 
 
@@ -155,7 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,54 +266,248 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>面向对象<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张盛的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/05/18/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url">
-              
-                <span itemprop="name">java面向对象</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">lambda表达式</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-05-18T10:36:59+08:00"
-              content="2021-05-18" >
-          05-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-20T16:08:26+08:00">
+                2021-05-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/lambda/" itemprop="url" rel="index">
+                    <span itemprop="name">lambda</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  502
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="lambda名称的由来"><a href="#lambda名称的由来" class="headerlink" title="lambda名称的由来"></a>lambda名称的由来</h3><blockquote>
+<p>很多年前，那时还没有计算机，逻辑学家Alonzo Church想要形式化地表示能有效计算的数学函数。（奇怪的是，有些函数已经知道是存在的，但是没有人知道该如何计算这些函数的值。）他使用了希腊字母lambda (λ)来标记参数。</p>
+<p>为什么是字母λ? Church已经把字母表里的所有其他字母都用完了吗？实际上，权威的《数学原理》一书中就使用重音符^来表示自由变量，受此启发，Church使用大写lambda（Λ）表示参数。不过，最后他还是改为使用小写的lambda(λ)。从那以后，带参数变量的表达式就被称为lambda表达式。</p>
+</blockquote>
+<h3 id="函数是接口"><a href="#函数是接口" class="headerlink" title="函数是接口"></a>函数是接口</h3><blockquote>
+<p>对于只有一个抽象方法的接口，需要这种接口的对象时，就可以提供一个lambda表达式。这种接口称为函数式接口（functional interface）。</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>一个函数式接口有且只有一个抽象方法（不一定非得用@FunctionalInterface注解，但建议使用注解，因为但你无意中增加了另一个非抽象方法编译器会提示错误消息）。</li>
+<li>默认方法不是抽象方法，因为它们已经实现了。</li>
+<li>重写了超类Object类中任意一个public方法的方法并不算接口中的抽象方法。</li>
+</ol>
+</blockquote>
+<h3 id="组成lambda表达式的3部分"><a href="#组成lambda表达式的3部分" class="headerlink" title="组成lambda表达式的3部分"></a>组成lambda表达式的3部分</h3><blockquote>
+<ul>
+<li>一个代码块</li>
+<li>参数</li>
+<li>自由变量的值，这是指非参数而且不在代码中定义的变量。</li>
+</ul>
+</blockquote>
+<h3 id="lambda表达式的重点是延迟执行-这个有很多原因，如："><a href="#lambda表达式的重点是延迟执行-这个有很多原因，如：" class="headerlink" title="lambda表达式的重点是延迟执行,这个有很多原因，如："></a>lambda表达式的重点是延迟执行,这个有很多原因，如：</h3><blockquote>
+<ul>
+<li>在一个单独的线程中运行代码；</li>
+<li>多次运行代码；</li>
+<li>在算法的适当位置运行代码（例如，排序中的比较操作）；</li>
+<li>发生某种情况时执行代码（如，点击了一个按钮，数据到达，等等）；</li>
+<li>只在必要时才运行代码。</li>
+</ul>
+</blockquote>
+<h3 id="常用的函数式接口"><a href="#常用的函数式接口" class="headerlink" title="常用的函数式接口"></a>常用的函数式接口</h3><p><img src="lambda_1.png" alt="常用的函数式接口"><br><img src="lambda-2.png" alt="基本类型函数式接口"></p>
+<h3 id="Comparator接口"><a href="#Comparator接口" class="headerlink" title="Comparator接口"></a>Comparator接口</h3><p><img src="Comparator.png" alt="comparator示例"></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/lambda/" rel="tag"># lambda</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/19/interface/" rel="next" title="java 接口">
+                <i class="fa fa-chevron-left"></i> java 接口
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -314,6 +515,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -334,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -409,6 +626,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E5%90%8D%E7%A7%B0%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">lambda名称的由来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%98%AF%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">函数是接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E6%88%90lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%843%E9%83%A8%E5%88%86"><span class="nav-number">3.</span> <span class="nav-text">组成lambda表达式的3部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%87%8D%E7%82%B9%E6%98%AF%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C-%E8%BF%99%E4%B8%AA%E6%9C%89%E5%BE%88%E5%A4%9A%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%A6%82%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">lambda表达式的重点是延迟执行,这个有很多原因，如：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">5.</span> <span class="nav-text">常用的函数式接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparator%E6%8E%A5%E5%8F%A3"><span class="nav-number">6.</span> <span class="nav-text">Comparator接口</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -578,6 +811,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
