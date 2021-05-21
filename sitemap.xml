@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhangsheng0540.github.io/2021/05/21/java%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
+    
+    <lastmod>2021-05-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
     <lastmod>2021-05-21</lastmod>
@@ -103,6 +110,13 @@
   
   <url>
     <loc>https://zhangsheng0540.github.io/tags/String/</loc>
+    <lastmod>2021-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangsheng0540.github.io/tags/%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
     <lastmod>2021-05-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
