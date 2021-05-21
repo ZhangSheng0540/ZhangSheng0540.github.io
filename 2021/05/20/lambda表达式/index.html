@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/lambda-2.png">
 <meta property="og:image" content="https://zhangsheng0540.github.io/2021/05/20/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/Comparator.png">
 <meta property="article:published_time" content="2021-05-20T08:08:26.000Z">
-<meta property="article:modified_time" content="2021-05-21T07:51:26.916Z">
+<meta property="article:modified_time" content="2021-05-21T07:53:43.026Z">
 <meta property="article:author" content="张盛">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="lambda">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  502
+                  504
                 </span>
               
 
@@ -419,7 +419,7 @@
 <p>很多年前，那时还没有计算机，逻辑学家Alonzo Church想要形式化地表示能有效计算的数学函数。（奇怪的是，有些函数已经知道是存在的，但是没有人知道该如何计算这些函数的值。）他使用了希腊字母lambda (λ)来标记参数。</p>
 <p>为什么是字母λ? Church已经把字母表里的所有其他字母都用完了吗？实际上，权威的《数学原理》一书中就使用重音符^来表示自由变量，受此启发，Church使用大写lambda（Λ）表示参数。不过，最后他还是改为使用小写的lambda(λ)。从那以后，带参数变量的表达式就被称为lambda表达式。</p>
 </blockquote>
-<h3 id="函数是接口"><a href="#函数是接口" class="headerlink" title="函数是接口"></a>函数是接口</h3><blockquote>
+<h3 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h3><blockquote>
 <p>对于只有一个抽象方法的接口，需要这种接口的对象时，就可以提供一个lambda表达式。这种接口称为函数式接口（functional interface）。</p>
 </blockquote>
 <blockquote>
@@ -446,7 +446,7 @@
 </ul>
 </blockquote>
 <h3 id="常用的函数式接口"><a href="#常用的函数式接口" class="headerlink" title="常用的函数式接口"></a>常用的函数式接口</h3><p><img src="lambda_1.png" alt="常用的函数式接口"><br><img src="lambda-2.png" alt="基本类型函数式接口"></p>
-<h3 id="Comparator接口"><a href="#Comparator接口" class="headerlink" title="Comparator接口"></a>Comparator接口</h3><p><img src="Comparator.png" alt="comparator示例"></p>
+<h3 id="Comparator接口示例"><a href="#Comparator接口示例" class="headerlink" title="Comparator接口示例"></a>Comparator接口示例</h3><p><img src="Comparator.png" alt="comparator示例"></p>
 
       
     </div>
@@ -636,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E5%90%8D%E7%A7%B0%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">lambda名称的由来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%98%AF%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">函数是接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E6%88%90lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%843%E9%83%A8%E5%88%86"><span class="nav-number">3.</span> <span class="nav-text">组成lambda表达式的3部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%87%8D%E7%82%B9%E6%98%AF%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C-%E8%BF%99%E4%B8%AA%E6%9C%89%E5%BE%88%E5%A4%9A%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%A6%82%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">lambda表达式的重点是延迟执行,这个有很多原因，如：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">5.</span> <span class="nav-text">常用的函数式接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparator%E6%8E%A5%E5%8F%A3"><span class="nav-number">6.</span> <span class="nav-text">Comparator接口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E5%90%8D%E7%A7%B0%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">lambda名称的由来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.</span> <span class="nav-text">函数式接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E6%88%90lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%843%E9%83%A8%E5%88%86"><span class="nav-number">3.</span> <span class="nav-text">组成lambda表达式的3部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E9%87%8D%E7%82%B9%E6%98%AF%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C-%E8%BF%99%E4%B8%AA%E6%9C%89%E5%BE%88%E5%A4%9A%E5%8E%9F%E5%9B%A0%EF%BC%8C%E5%A6%82%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">lambda表达式的重点是延迟执行,这个有很多原因，如：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="nav-number">5.</span> <span class="nav-text">常用的函数式接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparator%E6%8E%A5%E5%8F%A3%E7%A4%BA%E4%BE%8B"><span class="nav-number">6.</span> <span class="nav-text">Comparator接口示例</span></a></li></ol></div>
             
 
           </div>
