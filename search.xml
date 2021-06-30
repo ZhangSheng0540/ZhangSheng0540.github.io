@@ -112,6 +112,31 @@
     
     
     <entry>
+      <title>java面试</title>
+      <link href="2021/06/01/java%E9%9D%A2%E8%AF%95/"/>
+      <url>2021/06/01/java%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="JDK面试常见问题总结"><a href="#JDK面试常见问题总结" class="headerlink" title="JDK面试常见问题总结"></a>JDK面试常见问题总结</h3><h4 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h4><h5 id="mysql-主键自增"><a href="#mysql-主键自增" class="headerlink" title="mysql 主键自增"></a>mysql 主键自增</h5><blockquote><p>当mysql使用innoDB存储引擎的时候，当使用自增int类型达到最大值的时候，int 的最大值为 4294967295，超过这个最大值的时候，会报错：<br>  <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Duplicate entry &#x27;<span class="number">4294967295</span>&#x27; for key &#x27;PRIMARY&#x27;</span><br></pre></td></tr></table></figure><br>要解决这个问题，可以把int类型改为biglnt类型</p></blockquote><h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><blockquote><p>线程安全的几个特性</p><ul><li>原子性，正在执行的操作不对被其他线程干扰，一般使用cas操作和unsafe 关键字</li><li>可见性，在一个线程中定义一个变量，他的状态会立马被其他线程知晓，一般使用volatitle关键字</li><li>有序行，保证线程内的串行语句，避免指令重排，一般使用Synchronized，ReentrantLock，volatitle关键字</li></ul></blockquote><h4 id="ReentrantLock和Synchronized区别"><a href="#ReentrantLock和Synchronized区别" class="headerlink" title="ReentrantLock和Synchronized区别"></a>ReentrantLock和Synchronized区别</h4><blockquote><p>使用方式</p><ul><li>Synchronized可以修饰类，方法，代码块，自动释放锁</li><li>ReentrantLock一般在try——catch——finally语句中，在try语句中获取锁，在finally语句中释放做，手动释放锁。</li></ul></blockquote><blockquote><p>可中断的</p><ul><li>Synchronized不可中断</li><li>ReentrantLock提供不可中断和可中断两种方式，其中lockInterruptibly方法表示可中断，lock方法表示不可中断</li></ul></blockquote><blockquote><p>公平和非公平</p><ul><li>Synchronized是非公平锁</li><li>ReentrantLock提供公平和非公平两种方式，默认是非公平的，在构造方法中添加true属性可以构造为公平锁。</li></ul></blockquote><blockquote><p>实现机制</p><ul><li>Synchronized是通过monitorrenter和monitorexit这两个字节码制定操作的。</li><li>ReentrantLock</li></ul></blockquote><h4 id="Redis相关"><a href="#Redis相关" class="headerlink" title="Redis相关"></a>Redis相关</h4><h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> java面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java代理</title>
       <link href="2021/05/26/java%E4%BB%A3%E7%90%86/"/>
       <url>2021/05/26/java%E4%BB%A3%E7%90%86/</url>
