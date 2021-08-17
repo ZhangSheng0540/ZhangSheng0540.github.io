@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"zhangsheng0540.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":false,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="张盛的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张盛的博客">
-<meta property="og:url" content="https://zhangsheng0540.github.io/tags/HashMap/index.html">
+  <meta name="description" content="服务监控可行性方案调研方案一 Spring Boot Actuator + Spring Boot Admin Client（或者Spring Cloud Discorvery Client） + Spring Boot Admin Server 该方案是最简单的，全都是使用Spring官司推荐的组件来弄，只需要简单配置即可。   SpringBoot 应用可以通过 Actuator 来暴露应用运">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用开源服务监控">
+<meta property="og:url" content="https://zhangsheng0540.github.io/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/index.html">
 <meta property="og:site_name" content="张盛的博客">
-<meta property="og:description" content="张盛的博客">
+<meta property="og:description" content="服务监控可行性方案调研方案一 Spring Boot Actuator + Spring Boot Admin Client（或者Spring Cloud Discorvery Client） + Spring Boot Admin Server 该方案是最简单的，全都是使用Spring官司推荐的组件来弄，只需要简单配置即可。   SpringBoot 应用可以通过 Actuator 来暴露应用运">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-17T07:42:05.000Z">
+<meta property="article:modified_time" content="2021-08-17T08:00:16.549Z">
 <meta property="article:author" content="张盛">
-<meta property="article:tag" content="张盛">
+<meta property="article:tag" content="服务监控">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zhangsheng0540.github.io/tags/HashMap/">
+<link rel="canonical" href="https://zhangsheng0540.github.io/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/">
 
 
 <script id="page-configurations">
@@ -39,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 <link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
-  <title>标签: HashMap | 张盛的博客</title>
+  <title>常用开源服务监控 | 张盛的博客</title>
   
 
 
@@ -184,77 +186,344 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhangsheng0540.github.io/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="张盛">
+      <meta itemprop="description" content="张盛的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张盛的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          常用开源服务监控
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-17 15:42:05 / 修改时间：16:00:16" itemprop="dateCreated datePublished" datetime="2021-08-17T15:42:05+08:00">2021-08-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">微服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">HashMap
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h3 id="服务监控可行性方案调研"><a href="#服务监控可行性方案调研" class="headerlink" title="服务监控可行性方案调研"></a>服务监控可行性方案调研</h3><h4 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h4><blockquote>
+<p>Spring Boot Actuator + Spring Boot Admin Client（或者Spring Cloud Discorvery Client） + Spring Boot Admin Server 该方案是最简单的，全都是使用Spring官司推荐的组件来弄，只需要简单配置即可。</p>
+</blockquote>
+<blockquote>
+<p>SpringBoot 应用可以通过 Actuator 来暴露应用运行过程中的各项指标，Spring Boot Admin 通过这些指标来监控 SpringBoot 应用，然后通过图形化界面呈现出来。Spring Boot Admin 不仅可以监控单体应用，还可以和 Spring Cloud 的注册中心相结合来监控微服务应用。</p>
+</blockquote>
+<blockquote>
+<p>Spring Boot Admin 可以提供应用的以下监控信息：</p>
+<ul>
+<li><ol>
+<li>   监控应用运行过程中的概览信息；</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   度量指标信息，比如JVM、Tomcat及进程信息；</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   环境变量信息，比如系统属性、系统环境变量以及应用配置信息；</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>   查看所有创建的Bean信息；</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>   查看应用中的所有配置信息；</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>   查看应用运行日志信息；</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>   查看JVM信息；</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>   查看可以访问的Web端点；</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>   查看HTTP跟踪信息；</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<h5 id="该方案的特点："><a href="#该方案的特点：" class="headerlink" title="该方案的特点："></a>该方案的特点：</h5><blockquote>
+<ul>
+<li><ol>
+<li>   类似注册中心的机制，业务应用只需要配置Admin Server地址就可以了，Admin Server 无需配置所有应用的地址</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   简单，从数据收集到GUI都是现有的组件。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   如果有Spring Cloud Discorvery服务发现的组件（如Eurke），可以拿到所有的服务的访问地址，然后就可以采集指标数据了，没有的话 只能在每个服务中配置Admin Server地址</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>   需要一个单独的Spring Boot Admin Server来采集数据</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<h4 id="方案二（推荐）"><a href="#方案二（推荐）" class="headerlink" title="方案二（推荐）"></a>方案二（推荐）</h4><blockquote>
+<p>Spring Boot Actuator + Grafana + Prometheus (Prometheus可以换位其他的时序数据库也可以，例如InfulxDB），Prometheus 是一款开源的监控 + 时序数据库 + 报警软件，Grafana 也是一个开源的跨平台度量分析和可视化 + 告警工具，它支持多种数据源，开箱即用。</p>
+</blockquote>
+<h5 id="该方案的特点：-1"><a href="#该方案的特点：-1" class="headerlink" title="该方案的特点："></a>该方案的特点：</h5><blockquote>
+<ul>
+<li><ol>
+<li>   具有由 metric 名称和键/值对标识的时间序列数据的多维数据模型</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   图形可视化界面丰富。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   不依赖分布式存储，只和本地磁盘有关</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>   通过 HTTP 的服务拉取时间序列数据，也支持推送的方式来添加时间序列数据</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>   灵活而强大的查询语句（PromQL）</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>   数据采集有可能会丢失，不适用与对数据要 100% 准确的情形</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>   不需要埋点，对应用侵入性少</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>结合目前项目没有一个统一的服务发现组件，可以考虑用方案二，将每一个服务的metrics数据暴露出去，让Prometheus去采集，最后展示出来。</p>
+</blockquote>
+<blockquote>
+<p>相比较前方案一，方案二需要一定的学习成本，运维成本，还需要申请机器。推荐用这种方式，目前市场上流行的也是这种方式，社区比较活跃。它是基于团队的，适合中小团队搭建使用。</p>
+</blockquote>
+<h4 id="其他开源的监控平台"><a href="#其他开源的监控平台" class="headerlink" title="其他开源的监控平台"></a>其他开源的监控平台</h4><h5 id="开源分布式监控平台ZMon-：https-github-com-zalando-zmon"><a href="#开源分布式监控平台ZMon-：https-github-com-zalando-zmon" class="headerlink" title="开源分布式监控平台ZMon ：https://github.com/zalando/zmon"></a>开源分布式监控平台ZMon ：<a target="_blank" rel="noopener" href="https://github.com/zalando/zmon">https://github.com/zalando/zmon</a></h5><blockquote>
+<p>ZMon 一开始就设计成分布式的，是平台级的监控系统，这个开源监控平台相比较Prometheus来说，它是基于整体的，适合大规模，使用拉取的模式</p>
+</blockquote>
+<blockquote>
+<p>该监控平台特点：</p>
+<ul>
+<li><ol>
+<li>   Zalando 开源</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   分布式监控告警系统</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   拉模式(Check)</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>   Python 定义 Check/Alert</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>   DevOps 团队自治监控</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>   基于 KairosDB</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>但是现在gitlab上已经停止维护这个了</p>
+</blockquote>
+<h5 id="分布式监控平台CAT-https-github-com-dianping-cat"><a href="#分布式监控平台CAT-https-github-com-dianping-cat" class="headerlink" title="分布式监控平台CAT  https://github.com/dianping/cat"></a>分布式监控平台CAT  <a target="_blank" rel="noopener" href="https://github.com/dianping/cat">https://github.com/dianping/cat</a></h5><blockquote>
+<p>CAT是美团点评基于 Java 开发的一套开源的分布式实时监控系统。美团点评基础架构部希望在基础存储、高性能通信、大规模在线访问、服务治理、实时监控、容器化及集群智能调度等领域提供业界领先的、统一的解决方案，CAT 目前在美团点评的产品定位是应用层的统一监控组件，在中间件（RPC、数据库、缓存、MQ 等）框架中得到广泛应用，为各业务线提供系统的性能指标、健康状况、实时告警等服务。</p>
+</blockquote>
+<blockquote>
+<p>该监控平台特点：</p>
+<ul>
+<li><ol>
+<li>   支持多语言客户端，除 Java 客户端外，目前提供了 C/C++、Python、Node.js、Golang 客户端，基本覆盖了主流的开发语言</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   是用java开发的，阅读源码方便点</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   已经接入的公司多，经得起考验</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>有学习成本，快速上手比较难。</p>
+</blockquote>
+<h5 id="分布式监控平台Open-Falcon-https-github-com-open-falcon-falcon-plus"><a href="#分布式监控平台Open-Falcon-https-github-com-open-falcon-falcon-plus" class="headerlink" title="分布式监控平台Open-Falcon https://github.com/open-falcon/falcon-plus"></a>分布式监控平台Open-Falcon <a target="_blank" rel="noopener" href="https://github.com/open-falcon/falcon-plus">https://github.com/open-falcon/falcon-plus</a></h5><blockquote>
+<p>Open-Falcon是小米开源的一块监控平台，是用golang编写的</p>
+</blockquote>
+<blockquote>
+<p>该监控平台特点：</p>
+<ul>
+<li><ol>
+<li>   强大灵活的数据采集：自动发现，支持falcon-agent、snmp、支持用户主动push、用户自定义插件支持、opentsdb data model like（timestamp、endpoint、metric、key-value tags）</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>   水平扩展能力：支持每个周期上亿次的数据采集、告警判定、历史数据存储和查询</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>   高效率的告警策略管理：高效的portal、支持策略模板、模板继承和覆盖、多种告警方式、支持callback调用</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>   人性化的告警设置：最大告警次数、告警级别、告警恢复通知、告警暂停、不同时段不同阈值、支持维护周期</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>   高效率的graph组件：单机支撑200万metric的上报、归档、存储（周期为1分钟）</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>   高效的历史数据query组件：采用rrdtool的数据归档策略，秒级返回上百个metric一年的历史数据</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>   dashboard：多维度的数据展示，用户自定义Screen</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>   高可用：整个系统无核心单点，易运维，易部署，可水平扩展</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>   开发语言： 整个系统的后端，全部golang编写，portal和dashboard使用python编写</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-02T09:39:47+08:00"
-              content="2021-06-02">
-          06-02
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>张盛
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zhangsheng0540.github.io/2021/08/17/%E5%B8%B8%E7%94%A8%E5%BC%80%E6%BA%90%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/" title="常用开源服务监控">https://zhangsheng0540.github.io/2021/08/17/常用开源服务监控/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/06/02/HashMap%E6%BA%90%E7%A0%81/" itemprop="url">
-            <span itemprop="name">JDK1.7中HashMap源码解析</span>
-          </a>
-      </div>
 
-    </header>
-  </article>
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7/" rel="tag"><i class="fa fa-tag"></i> 服务监控</a>
+          </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-02T09:39:47+08:00"
-              content="2021-06-02">
-          06-02
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/06/02/HashMap%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" itemprop="url">
-            <span itemprop="name">JDK1.8中HashMap源码解析</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/21/springAOP%E6%BA%90%E7%A0%81/" rel="prev" title="Spring AOP 源码解析">
+      <i class="fa fa-chevron-left"></i> Spring AOP 源码解析
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -301,6 +570,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%9B%91%E6%8E%A7%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%96%B9%E6%A1%88%E8%B0%83%E7%A0%94"><span class="nav-number">1.</span> <span class="nav-text">服务监控可行性方案调研</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">方案一</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%A5%E6%96%B9%E6%A1%88%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">该方案的特点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">方案二（推荐）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%A5%E6%96%B9%E6%A1%88%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">该方案的特点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%BC%80%E6%BA%90%E7%9A%84%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.3.</span> <span class="nav-text">其他开源的监控平台</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%80%E6%BA%90%E5%88%86%E5%B8%83%E5%BC%8F%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0ZMon-%EF%BC%9Ahttps-github-com-zalando-zmon"><span class="nav-number">1.3.1.</span> <span class="nav-text">开源分布式监控平台ZMon ：https:&#x2F;&#x2F;github.com&#x2F;zalando&#x2F;zmon</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0CAT-https-github-com-dianping-cat"><span class="nav-number">1.3.2.</span> <span class="nav-text">分布式监控平台CAT  https:&#x2F;&#x2F;github.com&#x2F;dianping&#x2F;cat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0Open-Falcon-https-github-com-open-falcon-falcon-plus"><span class="nav-number">1.3.3.</span> <span class="nav-text">分布式监控平台Open-Falcon https:&#x2F;&#x2F;github.com&#x2F;open-falcon&#x2F;falcon-plus</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
